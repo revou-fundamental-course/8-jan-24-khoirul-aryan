@@ -1,22 +1,69 @@
-body{
-    background-color: azure;
-    color: aqua;
-    font-family: 'Segoe UI', Tahoma;
-    margin: 100px;
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 100px;
 }
 
-h1 {
-    color: aquamarine;
-    font-size: 50px;   
+.calculator {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
-input{
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
+
+h2 {
+  width: 95%;
+  padding: 10px;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
 }
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
 button {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    margin: 5px;
+  width: 20%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#hasil {
+  display: none;
+  margin-top: 20px;
+}
+
+#hasil p {
+  margin: 10px 0;
+}
+.tab {
+  display: none;
+}
+
+.active-tab {
+  display: block;
 }

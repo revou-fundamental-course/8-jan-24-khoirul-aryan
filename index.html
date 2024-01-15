@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="/css/style.css" />
+  <title>Katik</title>
   </head>
   <body>
-    <h1>Kalkulator Persegi</h1>
-    <tr>
-      <td><button onclick="display('1')">1</button></td>
-      <td><button onclick="display('1')">1</button></td>
-      <td><button onclick="display('1')">1</button></td>
-      <td><button onclick="display('1')">1</button></td>
-      <td><button onclick="display('1')">1</button></td>
-    </tr>
+    <h1>Kalkulator Matematik Persegi</h1>
+    <div class="calculator">
+      <h2>Welcome to Katik</h2>
+      <h3>Web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</h3>
+
+      <!-- Tabs -->
+      <div>
+        <button onclick="changeTab('kelilingTab')">Keliling</button>
+        <button onclick="changeTab('luasTab')">Luas</button>
+      </div>
+
+      <!-- Keliling Tab -->
+      <div class="tab" id="kelilingTab">
+        <form id="kelilingForm">
+          <h1>ini contoh rumus</h1>
+          <label for="sisiKeliling">Panjang sisi</label>
+          <input type="text" id="sisiKeliling" required />
+          <button type="button" onclick="hitungKeliling()">Hitung</button>
+          <button type="reset" onclick="resetKeliling()">Reset</button>
+        </form>
+        <div id="hasilKeliling">
+          <p id="HasilKeliling">Keliling: <span id="NilaiKeliling"></span></p>
+        </div>
+      </div>
+
+      <!-- Luas Tab -->
+      <div class="tab" id="luasTab">
+        <form id="luasForm">
+          <label for="sisiLuas">Panjang sisi</label>
+          <input type="text" id="sisiLuas" required />
+          <button type="button" onclick="hitungLuas()">Hitung</button>
+          <button type="reset" onclick="resetLuas()">Reset</button>
+        </form>
+        <div id="hasilLuas">
+          <p id="HasilLuas">Luas: <span id="NilaiLuas"></span></p>
+        </div>
+      </div>
+
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
