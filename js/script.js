@@ -1,16 +1,14 @@
 function changeTab(tabId) {
-  // Hide all tabs
+  // Menyembunyikan semua tab
   var tabs = document.querySelectorAll('.tab');
   tabs.forEach(function (tab) {
     tab.classList.remove('active-tab');
   });
 
-  // Show the selected tab
   document.getElementById(tabId).classList.add('active-tab');
 }
 
 function hitungKeliling() {
-  // Dapatkan panjang sisi dari input
   var sisi = parseFloat(document.getElementById('sisiKeliling').value);
 
   // Validasi input
@@ -21,15 +19,15 @@ function hitungKeliling() {
 
   var keliling = 4 * sisi;
 
+  document.getElementById("ValueKeliling").innerHTML = sisi;
   // Tampilkan hasil
   document.getElementById('NilaiKeliling').innerText = keliling;
-
+  
   // Tampilkan container hasil
   document.getElementById('hasilKeliling').style.display = 'block';
 }
 
 function hitungLuas() {
-  // Dapatkan panjang sisi dari input
   var sisi = parseFloat(document.getElementById('sisiLuas').value);
 
   // Validasi input
@@ -40,21 +38,19 @@ function hitungLuas() {
 
   var luas = sisi * sisi;
 
-  // Tampilkan hasil
+  document.getElementById('ValueLuas').innerText = sisi + 'x' + sisi;
   document.getElementById('NilaiLuas').innerText = luas;
-
-  // Tampilkan container hasil
   document.getElementById('hasilLuas').style.display = 'block';
 }
 
+//mereset input dan menyembunyikan container
 function resetKeliling() {
-  // Reset input and hide result container
   document.getElementById('kelilingForm').reset();
   document.getElementById('hasilKeliling').style.display = 'none';
 }
 
+//mereset input dan menyembunyikan container
 function resetLuas() {
-  // Reset input and hide result container
   document.getElementById('luasForm').reset();
   document.getElementById('hasilLuas').style.display = 'none';
 }

@@ -2,47 +2,85 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/style.css" />
-  <title>Katik</title>
+    <title>Katik</title>
   </head>
   <body>
     <h1>Kalkulator Matematik Persegi</h1>
     <div class="calculator">
       <h2>Welcome to Katik</h2>
-      <h3>Web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</h3>
-
-      <!-- Tabs -->
+      <!-- tab kode -->
       <div>
+        <h3>
+          Web apps sederhana yang berfungsi untuk menghitung nilai luas dan
+          keliling bangun datar
+        </h3>
         <button onclick="changeTab('kelilingTab')">Keliling</button>
         <button onclick="changeTab('luasTab')">Luas</button>
       </div>
 
-      <!-- Keliling Tab -->
+      <!-- tab keliling -->
       <div class="tab" id="kelilingTab">
         <form id="kelilingForm">
-          <h1>ini contoh rumus</h1>
-          <label for="sisiKeliling">Panjang sisi</label>
-          <input type="text" id="sisiKeliling" required />
+          <img
+            src="/pic/kotak.bmp"
+            height="100px"
+            width="100px"
+            alt="rectangle"
+          />
+          <div>
+            <p>Rumus Keliling Persegi yaitu :</p>
+            <h1 class="rumus">K=4xS</h1>
+            <div>
+              <p>Di mana :</p>
+              <p>L = Luas</p>
+              <p>S = Sisi</p>
+            </div>
+          </div>
+          <label for="sisiKeliling">Hitung Keliling Persegi</label>
+          <input
+            type="text"
+            placeholder="Nilai Sisi"
+            id="sisiKeliling"
+            required
+          />
           <button type="button" onclick="hitungKeliling()">Hitung</button>
           <button type="reset" onclick="resetKeliling()">Reset</button>
         </form>
         <div id="hasilKeliling">
-          <p id="HasilKeliling">Keliling: <span id="NilaiKeliling"></span></p>
+          <p>K=4xS</p>
+          <p id="ValueKelilingText">K=4x<span id="ValueKeliling"></span></p>
+          <p id="HasilKeliling">Keliling = <span id="NilaiKeliling"></span></p>
         </div>
       </div>
-
-      <!-- Luas Tab -->
+      <!-- tab luas -->
       <div class="tab" id="luasTab">
         <form id="luasForm">
-          <label for="sisiLuas">Panjang sisi</label>
-          <input type="text" id="sisiLuas" required />
+          <img
+            src="/pic/kotak.bmp"
+            height="100px"
+            width="100px"
+            alt="rectangle"
+          />
+          <div>
+            <p>Rumus Luas Persegi yaitu :</p>
+            <h1 class="rumus">L=SxS</h1>
+            <div>
+              <p>Di mana :</p>
+              <p>L = Luas</p>
+              <p>S = Sisi</p>
+            </div>
+          </div>
+          <label for="sisiLuas">Hitung Luas Persegi</label>
+          <input type="text" placeholder="Nilai Sisi" id="sisiLuas" required />
           <button type="button" onclick="hitungLuas()">Hitung</button>
           <button type="reset" onclick="resetLuas()">Reset</button>
         </form>
         <div id="hasilLuas">
-          <p id="HasilLuas">Luas: <span id="NilaiLuas"></span></p>
+          <p>L=SxS</p>
+          <p id="ValueLuasText">L=<span id="ValueLuas"></span></p>
+          <p id="HasilLuas">Luas = <span id="NilaiLuas"></span></p>
         </div>
       </div>
-
     </div>
     <script src="js/script.js"></script>
   </body>
